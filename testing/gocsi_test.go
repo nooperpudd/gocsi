@@ -7,13 +7,13 @@ import (
 	"time"
 
 	"github.com/akutz/memconn"
-	"github.com/onsi/ginkgo"
+	"github.com/onsi/ginkgo/v2"
 	gomegaTypes "github.com/onsi/gomega/types"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"github.com/rexray/gocsi/mock/provider"
+	"github.com/nooperpudd/gocsi/mock/provider"
 )
 
 func startMockServer(ctx context.Context) (*grpc.ClientConn, func(), error) {

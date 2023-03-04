@@ -34,3 +34,4 @@ csi-sp.log
 
 # A macOS metadata file
 .DS_Store
+.idea/

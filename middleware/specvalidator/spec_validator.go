@@ -5,16 +5,16 @@ import (
 	"regexp"
 	"sync"
 
-	"github.com/golang/protobuf/proto"
 	log "github.com/sirupsen/logrus"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
+	"google.golang.org/protobuf/proto"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
 
-	"github.com/rexray/gocsi/utils"
+	"github.com/nooperpudd/gocsi/utils"
 )
 
 // Option configures the spec validator interceptor.

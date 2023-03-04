@@ -12,7 +12,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	mwtypes "github.com/rexray/gocsi/middleware/serialvolume/types"
+	mwtypes "github.com/nooperpudd/gocsi/middleware/serialvolume/types"
 )
 
 const pending = "pending"
@@ -44,12 +44,12 @@ func WithLockProvider(p mwtypes.VolumeLockerProvider) Option {
 // that provides serial access to volume resources across the following
 // RPCs:
 //
-//  * CreateVolume
-//  * DeleteVolume
-//  * ControllerPublishVolume
-//  * ControllerUnpublishVolume
-//  * NodePublishVolume
-//  * NodeUnpublishVolume
+//   - CreateVolume
+//   - DeleteVolume
+//   - ControllerPublishVolume
+//   - ControllerUnpublishVolume
+//   - NodePublishVolume
+//   - NodeUnpublishVolume
 func New(opts ...Option) grpc.UnaryServerInterceptor {
 
 	i := &interceptor{}

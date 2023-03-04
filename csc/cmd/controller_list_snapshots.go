@@ -7,8 +7,7 @@ import (
 	"github.com/spf13/cobra"
 
 	"github.com/container-storage-interface/spec/lib/go/csi"
-
-	"github.com/rexray/gocsi/utils"
+	"github.com/nooperpudd/gocsi/utils"
 )
 
 var listSnapshots struct {

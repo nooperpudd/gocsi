@@ -2,7 +2,7 @@
 
 HOME=${HOME:-/tmp}
 GOPATH=${GOPATH:-$HOME/go}
-GOPATH=$(echo "$GOPATH" | awk '{print $1}')
+GOPATH=$(echo "$GOPATH" | awk -F: '{print $NF}')
 
 if [ "$1" = "" ]; then
   echo "usage: $0 GO_IMPORT_PATH"
@@ -197,6 +197,13 @@ func (s *service) ControllerGetCapabilities(
 	return nil, nil
 }
 
+func (s *service) ControllerGetVolume(
+	ctx context.Context,
+	req *csi.ControllerGetVolumeRequest) (
+	*csi.ControllerGetVolumeResponse, error) {
+	return nil, nil
+}
+
 func (s *service) CreateSnapshot(
 	ctx context.Context,
 	req *csi.CreateSnapshotRequest) (
@@ -343,6 +350,7 @@ EOF
 
 
 echo "building $SP_NAME:"
+go mod init $SP_PATH
 go mod download && go mod verify
 go build .
 BUILD_RESULT=$?

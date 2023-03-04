@@ -8,13 +8,13 @@ import (
 	"strings"
 	"time"
 
-	etcd "github.com/coreos/etcd/clientv3"
-	etcdsync "github.com/coreos/etcd/clientv3/concurrency"
-	log "github.com/sirupsen/logrus"
 	"github.com/akutz/gosync"
+	log "github.com/sirupsen/logrus"
+	etcd "go.etcd.io/etcd/client/v3"
+	etcdsync "go.etcd.io/etcd/client/v3/concurrency"
 
-	csictx "github.com/rexray/gocsi/context"
-	mwtypes "github.com/rexray/gocsi/middleware/serialvolume/types"
+	csictx "github.com/nooperpudd/gocsi/context"
+	mwtypes "github.com/nooperpudd/gocsi/middleware/serialvolume/types"
 )
 
 // New returns a new etcd volume lock provider.

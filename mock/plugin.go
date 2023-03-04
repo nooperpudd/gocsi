@@ -1,3 +1,4 @@
+//go:build linux && plugin
 // +build linux,plugin
 
 package main
@@ -5,8 +6,8 @@ package main
 import "C"
 
 import (
-	"github.com/rexray/gocsi/mock/provider"
-	"github.com/rexray/gocsi/mock/service"
+	"github.com/nooperpudd/gocsi/mock/provider"
+	"github.com/nooperpudd/gocsi/mock/service"
 )
 
 ////////////////////////////////////////////////////////////////////////////////

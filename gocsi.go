@@ -26,8 +26,8 @@ import (
 	log "github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 
-	csictx "github.com/rexray/gocsi/context"
-	"github.com/rexray/gocsi/utils"
+	csictx "github.com/nooperpudd/gocsi/context"
+	"github.com/nooperpudd/gocsi/utils"
 )
 
 // Run launches a CSI storage plug-in.
