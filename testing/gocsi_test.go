@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/akutz/memconn"
-	"github.com/onsi/ginkgo/v2"
+	"github.com/onsi/ginkgo"
 	gomegaTypes "github.com/onsi/gomega/types"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"

@@ -1,7 +1,7 @@
 package gocsi_test
 
 import (
-	"github.com/onsi/ginkgo/v2"
+	"github.com/onsi/ginkgo"
 	"github.com/onsi/gomega"
 	log "github.com/sirupsen/logrus"
 
@@ -48,9 +48,10 @@ var PSpecify = ginkgo.PSpecify
 var XSpecify = ginkgo.XSpecify
 var By = ginkgo.By
 var Measure = ginkgo.Measure
-var FMeasure = ginkgo.FMeasure
-var PMeasure = ginkgo.PMeasure
-var XMeasure = ginkgo.XMeasure
+
+// var FMeasure = ginkgo.FMeasure
+// var PMeasure = ginkgo.PMeasure
+// var XMeasure = ginkgo.XMeasure
 var BeforeSuite = ginkgo.BeforeSuite
 var AfterSuite = ginkgo.AfterSuite
 var SynchronizedBeforeSuite = ginkgo.SynchronizedBeforeSuite
